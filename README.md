@@ -1,2 +1,2 @@
 # he
-inital repo
+initial repo

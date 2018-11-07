@@ -1,0 +1,113 @@
+---
+layout: classic
+title: "HTMLEdito Static | Classic Version"
+site_name: "HTMLEditor"
+permalink: "/classic"
+canonical: "https://htmleditor.pro/classic"
+lang: en
+metadata:
+  description: "HTMLEditor Static | Classic Version is HTML Editor, CSS Editor and Javascript Editor script in one simple and user-friendly UI. It is build with HTML5, CSS3 and many javascript libraries"
+image: "htmledito.png"
+---
+<textarea id=code name=code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;style&gt;
+/* CSS code is here */
+h1 {
+  font-family: sans-serif;
+  color: red;
+  font-weight: normal;
+}
+#HTMLedito {
+  background: #0A85A1;
+  color: white;
+  padding: .3rem;
+  border-radius: 3px;
+}
+h2 span {
+  color: #0099CC;
+}
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World...&lt;/h1&gt;
+    &lt;p&gt;Welcome to &lt;span id=&quot;HTMLedito&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;It is HTML, CSS, and Javascript live preview editor.&lt;/p&gt;
+    &lt;p style=&quot;font-style:italic&quot;&gt;Try to edit or write your own code. It's magic!&lt;/p&gt;
+    &lt;p&gt;The window editor is also resizable.&lt;/p&gt;
+    &lt;h2&gt;
+      Am I Like &lt;span&gt;codepen.io&lt;/span&gt; or &lt;span&gt;JSFiddle&lt;/span&gt; ?
+    &lt;/h2&gt;
+    &lt;script&gt;
+      document.getElementById(&quot;HTMLedito&quot;).innerHTML = &quot;HTMLedito&quot;;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</textarea>
+<iframe id=preview></iframe>
+<!-- Theme Select Option for htmledito Editor -->
+      <div class="htmledito-settings">
+        <p class="theme-option"><span>Themes: </span><select onchange="selectTheme()" id=select>
+        <option selected>default</option>
+        <option>3024-day</option>
+        <option>blackboard</option>
+        <option>cobalt</option>
+        <option>eclipse</option>
+        <option>mbo</option>
+        <option>mdn-like</option>
+        <option>monokai</option>
+        <option>pastel-on-dark</option>
+        <option>rubyblue</option>
+        <option>the-matrix</option>
+        <option>xq-light</option>
+        </select>
+        </p>
+      </div>
+
+        <div class="font-sizer">
+          <span id="sizer">Font Size:&nbsp;&nbsp;<a class="increase" href="#" title="Increase text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a><a class="decrease" href="#" title="Decrease text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a><a class="reset" href="#" title="Restore default font-sizes"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
+        </div>
+      <div class="about">
+      <p><span class="brand"><span class="brand-span">HTML</span>&nbsp;Edito</span> <small><em>Classic Version</em></small></p>
+      </div>
+
+    <script>
+      var delay;
+      // Initialize htmledito editor.
+      var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+        mode: 'text/html',
+        lineNumbers: true,
+        styleActiveLine: true,
+        matchBrackets: true
+      });
+      editor.on("change", function() {
+        clearTimeout(delay);
+        delay = setTimeout(updatePreview, 300);
+      });
+
+      function updatePreview() {
+        var previewFrame = document.getElementById('preview');
+        var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+        preview.open();
+        preview.write(editor.getValue());
+        preview.close();
+      }
+      setTimeout(updatePreview, 300);
+
+      // Select Custom Theme
+      var input = document.getElementById("select");
+      function selectTheme() {
+        var theme = input.options[input.selectedIndex].innerHTML;
+        editor.setOption("theme", theme);
+      }
+      var choice = document.location.search &&
+                   decodeURIComponent(document.location.search.slice(1));
+      if (choice) {
+        input.value = choice;
+        editor.setOption("theme", choice);
+      }
+    </script>

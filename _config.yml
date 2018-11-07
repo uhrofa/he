@@ -1,9 +1,88 @@
 url: ""
+
 baseurl: ""
 permalink: /:categories/:title
 
-collections_dir: tutorial
+images_path:
+  avatar: "/media/avatar/"
+  images: "/media/"
+  images_thumb: "/media/"
+  favicons: "/media/favicons/"
+  logo: "/media/logo/"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"  # default layout: post to every post page
+
+name: HTML Editor
+short_name: HTML Editor
+title: "HTML Editor - Online HTML, CSS, JavaScript Live Editor"
+keywords: [html,htmlref,tutorial,references,guide]
+description: "Online HTML Editor. With HTML Editor Pro you can play and test your HTML, CSS, and JavaScript code with unique interface and live preview panel. The Editor is inspired by Codepen and JSFiddle but comes with more features. Try it your codes with HTML Editor Pro"
+
+language: "en"          #your default site language
+
+author:            #default author
+  name: "Halwa RF"
+  profile: "https://plus.google.com/+HalwaRF/about"
+  email: halwarf@yahoo.com
+  avatar: "halwa.jpg"
+  description: "About Halwa RF"
+display_author: false
+
+editor:
+  name: "Fadlullah Fadul"
+  profile: "https://plus.google.com/+FadlullahFadul/about"
+
+publisher:
+  name: "apacara.com"
+  logo_url:         # if empty, use default image in logo folder
+  profile: "https://plus.google.com/+HalwaRF"
+
+ads:
+  enabled: true
+  data_ad_client: "ca-pub-3288866780282962"
+
+facebook:
+  fb_name: "@halwarf"
+  fb_app_id: "128890347793115"
+  fb_admins: "100007587970981"
+  profile_id: "100007587970981"
+  fb_pages: "507359169629207"
+  fb_url: "https://www.facebook.com/halwarf"
+
+twitter:
+  tw_name: "@halwarf"
+  tw_username: halwarf
+  tw_url: "https://twitter.com/halwarf"
+
+domain_verify:
+  google: "Bb-9_R3t_YIf2hlxgbUaf__9cNRDtf423EtTwV5mxsU"
+  pinterest: "b2d3e9c573a74ffea0cf126e762c002f"
+  yandex: "09645acbf7ca3960"
+  bing: "E3C6D0C7D77D3A13C3C553CAE5F409B5"
+
+# Comment System
+use_fb_comments: true            #if false, disqus comment will be used instead
+disqus: apacara
+disqus_script_url: "https://apacara.github.io/embed/gravcms/disqus-apacara2.html"
+
+# Google Analytics (e.g. UA-2110908-2)
+google_analytics: "UA-92050092-14"
+
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+
 collections:
-  css:
+  my_collection:
     output: true
-    permalink: /tutorial/css/:title.html

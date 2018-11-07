@@ -1,0 +1,349 @@
+/*!
+ * AMPBlogger Documentation for:
+ * Item: HTMLEdito v1.0
+ * URL: https://www.codecanyon/user/ampblogger/
+ * Based on Bootstrap 3 (https://bootswatch.com/sandstone/)
+*/
+body {
+    font-family: "Roboto", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+    font-weight: normal;
+    line-height: 1;
+    color: #98978b;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1 small,
+.h1 small,
+h2 small,
+.h2 small,
+h3 small,
+.h3 small,
+h1 .small,
+.h1 .small,
+h2 .small,
+.h2 .small,
+h3 .small,
+.h3 .small {
+    font-size: 65%;
+}
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h4 small,
+.h4 small,
+h5 small,
+.h5 small,
+h6 small,
+.h6 small,
+h4 .small,
+.h4 .small,
+h5 .small,
+.h5 .small,
+h6 .small,
+.h6 .small {
+    font-size: 75%;
+}
+h1,
+.h1 {
+    font-size: 32px;
+}
+h2,
+.h2 {
+    font-size: 26px;
+    font-weight: 600;
+}
+h3,
+.h3 {
+    font-size: 20px;
+}
+h4,
+.h4 {
+    font-size: 14px;
+}
+h5,
+.h5 {
+    font-size: 14px;
+}
+h6,
+.h6 {
+    font-size: 12px;
+}
+.first-heading {
+    margin-top: 90px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+a,
+a:focus,
+a:active {
+    outline: 0;
+}
+
+/* Navbar */
+.navbar-default {
+    background-color: #3E3F3A;
+    border-color: #3E3F3A;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #98978B;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FFF;
+    background-color: transparent;
+}
+
+.navbar .nav > li > a {
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar {
+    min-height: 63px;
+}
+
+.navbar-nav {
+    float: right;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+    color: #FFF;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 60px;
+}
+
+.navbar {
+    border-width: 0;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Masthead  */
+#masthead {
+    position: relative;
+    display: block;
+    margin-top: 62px;
+    background-color: #29ABE2;
+    height: 360px;
+    color: #fff;
+}
+
+#masthead h1 {
+    font-size: 30px;
+    line-height: 1;
+    padding-top: 60px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+#masthead p {
+    font-size: 20px;
+    line-height: 1.2em;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#masthead .doc-button {
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    background-color: #3E3F3A;
+    border: 2px solid #3E3F3A;
+    width: 160px;
+    color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+#masthead .doc-button a {
+    color: #FFF;
+    text-decoration: none;
+    line-height: 40px;
+    display: block;
+}
+#masthead .doc-button a:hover {
+    color: #3E3F3A;
+    text-decoration: none;
+}
+#masthead .doc-button:hover {
+    color: #3E3F3A;
+    border: 2px solid #3E3F3A;
+    background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+    #masthead h1 {
+        font-size: 40px;
+    }
+    #footer .col-left p {
+      text-align:left;
+    }
+    #footer .col-right p {
+      text-align:right;
+    }
+}
+@media screen and (max-width: 768px) {
+    #footer p {
+      text-align:center;
+    }
+
+}
+
+.affix-top,
+.affix {
+    position: static;
+}
+
+@media (min-width: 979px) {
+    #sidebar.affix-top {
+        position: static;
+        margin-top: 90px;
+        width: 228px;
+    }
+
+    #sidebar.affix {
+        position: fixed;
+        top: 110px;
+        width: 228px;
+    }
+}
+
+
+#sidebar li a {
+    color: #3E3F3A;
+    padding-left: 15px;
+}
+#sidebar li a:hover {
+    background-color: #29ABE2;
+    color: #fff;
+}
+
+#sidebar li.active a {
+    font-weight: 500;
+    color: #fff;
+}
+
+#sidebar li.active {
+    border: 0 #3E3F3A solid;
+    color: #fff;
+    border-left-width: 2px;
+    background-color: #29ABE2;
+}
+#sidebar li a:focus {
+    background-color: #29ABE2;
+}
+
+
+#content {
+    margin-bottom: 80px;
+}
+#content img {
+    max-width: 100%;
+    height: auto;   
+    margin: 15px 0;
+}
+
+.bg-warning {
+    background-color: #FF851B;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+#footer {
+    background-color: #3E3F3A;
+    padding: 10px 0;
+}
+
+#footer p {
+    padding: 7px 0;
+    margin: 0;
+    color: #FFF;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+#footer a {
+    color: #98978B;
+}
+#footer a:hover {
+    color: #FFF;
+    text-decoration: none;
+}

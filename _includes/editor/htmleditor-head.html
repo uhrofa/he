@@ -1,0 +1,156 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+  <meta content="{{ site.domain_verify.google }}" name="google-site-verification"/>
+  <meta content="{{ site.domain_verify.pinterest }}" name="p:domain_verify"/>
+  <meta content="{{ site.domain_verify.bing }}" name="msvalidate.01"/>
+  <meta content="{{ site.domain_verify.yandex }}" name="yandex-verification"/>
+  {%- capture site_name -%}
+    {%- if page.site_name -%}
+      {{ page.site_name }}
+    {%- else -%}
+    {{ site.name }}
+    {%- endif -%}
+  {%- endcapture -%}
+
+  {%- capture canonical_url -%}
+    {%- if page.canonical -%}
+      {{ page.canonical }}
+    {%- else -%}
+    {{ page.url | replace:'index.html','' | absolute_url }}
+    {%- endif -%}
+  {%- endcapture -%}
+  <link rel="canonical" href="{{ canonical_url }}"/>
+  {%- capture page_title -%}
+  {%- if page.title -%}
+    {{ page.title }}
+  {%- else -%}
+    {{ site.title }}
+  {%- endif -%}
+  {%- endcapture -%}
+  <title>{{ page_title }}</title>
+  {%- capture page_description -%}
+    {%- if page.metadata.description -%}
+      {{ page.metadata.description }}
+      {%- else -%}
+        {{ site.description }}
+    {%- endif -%}
+  {%- endcapture -%}
+  <meta name="description" content="{{ page_description }}"/>
+  {%- capture page_image -%}
+    {%- if page.image  -%}
+      {{ page.image | prepend: "/assets/img/" | absolute_url }}
+      {%- else -%}
+        {{ "htmleditor.png" | prepend: "/assets/img/" | absolute_url }}
+    {%- endif -%}
+  {%- endcapture -%}
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicons/apple-touch-icon.png' | absolute_url }}"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicons/favicon-32x32.png' | absolute_url }}"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicons/favicon-16x16.png' | absolute_url }}"/>
+  <link rel="manifest" href="{{ '/assets/favicons/site.webmanifest' | absolute_url }}"/>
+  <link rel="mask-icon" href="{{ '/assets/favicons/safari-pinned-tab.svg' | absolute_url }}" color="#5bbad5"/>
+  <link rel="shortcut icon" href="{{ '/assets/favicons/favicon.ico' | absolute_url }}"/>
+  <meta name="msapplication-config" content="{{ '/assets/favicons/browserconfig.xml' | absolute_url }}"/>
+  <meta name="msapplication-TileColor" content="#fffcfb">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="{{ site_name }}"/>
+  <meta name="application-name" content="{{ site_name }}"/>
+
+  <!-- Social -->
+  <meta property="og:title" content="{{ page_title }}"/>{%- if page.title -%}
+  <meta property="og:type" content="article"/>{%- else -%}
+  <meta property="og:type" content="website"/>{%- endif -%}
+  <meta property="og:url" content="{{ canonical_url }}"/>
+  <meta property="og:image" content="{{ page_image }}"/>
+  <meta property="og:site_name" content="{{ site_name }}"/>{%- if page.lang and page.lang.size > 0 -%}
+  <meta property="og:locale" content="{{ page.lang }}"/>{%- else -%}
+  <meta property="og:locale" content="{{ site.lang }}"/>{%- endif -%}
+  <meta property="og:description" content="{{ page_description }}"/>
+
+  <meta name="twitter:card" property="twitter:card" content="summary"/>
+  <meta name="twitter:site" property="twitter:site" content="{{site.twitter.tw_name}}"/>
+  <meta name="twitter:title" property="twitter:title" content="{{ page_title }}"/>
+  <meta name="twitter:image" property="twitter:image" content="{{ page_image }}"/>
+  <meta name="twitter:description" property="twitter:description" content="{{ page_description }}"/>
+  <meta property="fb:app_id" content="{{ site.facebook.fb_app_id }}"/>
+  <meta property="fb:admins" content="{{ site.facebook.fb_admins }}"/>
+  <meta property="fb:profile_id" content="{{ site.facebook.profile_id }}"/>
+  <meta property="fb:pages" content="{{ site.facebook.fb_pages }}"/>
+
+  <link href="{{ '/assets/js/vendor/jquery.splitter/css/jquery.splitter.css' | absolute_url }}" rel="stylesheet"/>
+  <!-- gray theme - splitter
+  <link href="{{ '/assets/js/vendor/jquery.splitter/css/clean.jquery.splitter.css' | absolute_url }}" rel="stylesheet"/> -->
+  <script src="{{ '/node_modules/jquery/dist/jquery.min.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/vendor/jquery.splitter/js/splitter.js' | absolute_url }}"></script>
+
+  <script src="{{ '/node_modules/codemirror/lib/codemirror.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/mode/xml/xml.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/mode/javascript/javascript.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/mode/css/css.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/mode/htmlmixed/htmlmixed.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/addon/selection/active-line.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/addon/edit/matchbrackets.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/addon/comment/continuecomment.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/addon/comment/comment.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/addon/edit/closetag.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/codemirror/addon/edit/closebrackets.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/vendor/emmet/emmet.js' | absolute_url }}"></script>
+  <script src="{{ '/node_modules/nprogress/nprogress.js' | absolute_url }}"></script>
+
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/lib/codemirror.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/app.css' | absolute_url }}">
+  <link href="{{ '/node_modules/nprogress/nprogress.css' | absolute_url }}" rel="stylesheet"/>
+
+  <!-- styles for HTMLEdito code highligter themes -->
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/blackboard.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/cobalt.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/eclipse.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/mbo.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/mdn-like.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/monokai.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/pastel-on-dark.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/rubyblue.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/the-matrix.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/node_modules/codemirror/theme/xq-light.css' | absolute_url }}">
+  <script>
+  	jQuery(function($){
+  		NProgress.done(true);
+  	});
+  </script>
+  <script src="{{ '/assets/js/vendor/dw_fontsizer/js/dw_event.js' | absolute_url }}" type="text/javascript"></script>
+  <script src="{{ '/assets/js/vendor/dw_fontsizer/js/dw_cookies.js' | absolute_url }}" type="text/javascript"></script>
+  <script src="{{ '/assets/js/vendor/dw_fontsizer/js/dw_sizerdx.js' | absolute_url }}" type="text/javascript"></script>
+  <script>
+  dw_fontSizerDX.setDefaults("px", 13, 12, 26, ['div.CodeMirror'] );
+
+  dw_Event.add( window, 'load', dw_fontSizerDX.init );
+  </script>
+
+  <script type="application/ld+json">
+  { "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "{{ page_title }}",
+    "headline": "{{ page_title }}",
+    "image": "{{ page_image }}",
+    "inLanguage": "{{ page.lang }}",
+    "mainEntityOfPage": "True",
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.publisher.name }}",
+      "logo": {
+        "@type": "imageObject",
+        "url": "{{ '/assets/img/publisher-logo.png' | absolute_url }}"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.profile }}"
+    },
+    "editor": "{{ site.editor.profile }}",
+    "url": "{{ canonical_url }}",
+    "description": "{{ page_description }}"
+  }
+  </script>
+</head>

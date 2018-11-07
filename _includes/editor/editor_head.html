@@ -1,0 +1,51 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta content='width=device-width,minimum-scale=1,initial-scale=1' name='viewport'/>
+  <title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="canonical" href="{{ ".html" | prepend: page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"/>
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.apacara.com/media/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.apacara.com/media/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.apacara.com/media/favicons/favicon-16x16.png">
+  <link rel="manifest" href="https://www.apacara.com/media/favicons/manifest.json">
+  <link rel="mask-icon" href="https://www.apacara.com/media/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="https://www.apacara.com/media/favicons/favicon.ico">
+  <meta name="msapplication-config" content="https://www.apacara.com/media/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="apacara.com">
+  <meta name="application-name" content="apacara.com" />
+
+  <meta name="author" content="{%if post_author.profile %}{{ post_author.profile }}{% else %}{{ site.author.profile }}{% endif %}" />
+  <link rel="publisher" href="{{ site.publisher.profile }}" />
+
+  <script src="{{ '/assets/vendor/jquery/jquery-1.11.2.min.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <script src="{{ '/assets/vendor/jquery.splitter/js/splitter.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <script src="{{ '/assets/vendor/codemirror/lib/codemirror.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <script src="{{ '/assets/vendor/codemirror/mode/xml/xml.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <script src="{{ '/assets/vendor/codemirror/mode/javascript/javascript.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <script src="{{ '/assets/vendor/codemirror/mode/css/css.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <script src="{{ '/assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+  <link rel="stylesheet" href="{{ '/assets/vendor/codemirror/lib/codemirror.css' | prepend: site.baseurl | prepend: site.url}}">
+  <link rel="stylesheet" href="{{ "/assets/css/editor.css" | prepend: site.baseurl | prepend: site.url }}">
+  <script src="{{ '/assets/vendor/emmet/emmet.min.js' | prepend: site.baseurl | prepend: site.url}}"></script>
+
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' }}">
+  <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css' }}">
+
+  {% if page.add_head %}
+  {{ page.add_head }}
+  {% endif %}
+
+  {% if page.add_head_script %}
+  <script>
+  {{ page.add_head_script }}
+  </script>
+  {% endif %}
+
+  {% if page.add_style %}
+  <style>
+  {{ page.add_style }}
+  </style>
+  {% endif %}
+</head>

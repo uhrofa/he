@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include editor/htmleditor-head.html %}
+<body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92050092-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92050092-9');
+</script>
+{{ content }}
+</body>
+</html>

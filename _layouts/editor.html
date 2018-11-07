@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html {% if page.language %}lang="{{ page.language }}"{% elsif site.language %}lang="{{ site.language }}"{% endif %}>
+{% include editor_head_cdn.html %}
+<body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.google_analytics}}');
+</script>
+  <div id="loader"></div>
+{% include editor_navigation.html %}
+<div class="article" id="content" role="main">
+  <ul class='tabs'>
+  	<li><a href='#tab1' accesskey="h">HTML</a></li>
+  	<li><a href='#tab2' accesskey="c">CSS</a></li>
+  	<li><a href='#tab3' accesskey="j">JS</a></li>
+    <li><a id="preview_tab" href='#tab4' accesskey="o">PREVIEW</a></li>
+  </ul>
+  <div id='tab1'>
+    <div id="codehtml">
+      <textarea id="codeeditorhtml" name="codeeditorhtml">
+{{ content | xml_escape }}
+      </textarea>
+    </div>
+  </div>
+  <div id='tab2'>
+    <div id="codecss">
+      <textarea id="codeeditorcss" name="codeeditorcss">
+/* CSS code */
+{% if page.add_css %}
+{{ page.add_css }}
+{% endif %}
+      </textarea>
+    </div>
+  </div>
+  <div id='tab3'>
+    <div id="codejs">
+      <textarea id="codeeditorjs" name="codeeditorjs">
+// javascript code
+{% if page.add_js %}
+{{ page.add_js }}
+{% endif %}
+      </textarea>
+    </div>
+  </div>
+  <div id='tab4'>
+    <div id="codepreview">
+      <div id="previewmask"></div>
+      <iframe id="preview" sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"></iframe>
+    </div>
+  </div>
+</div>
+<script src="{{ "/assets/js/editor.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+{% if page.add_foot %}
+{{ page.add_foot }}
+{% endif %}
+
+{% if page.add_foot_script %}
+<script>
+{{ page.add_foot_script }}
+</script>
+{% endif %}
+<script>
+$(document).ready(function(){
+  $('#preview_tab')[0].click();
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+</script>
+<script>
+      var tinyurl = '';
+      var revision = '';
+
+      var sembunyikanAku = function(){
+    $('#librarymenu').hide();
+    $('#settingsmenu').hide();
+  }
+      $('textarea')
+          .focus(sembunyikanAku)
+</script>
+<script>
+  $(document).ready(function(){
+    $('ul.tabs').each(function(){
+      var $active, $content, $links = $(this).find('a');
+      $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+      $active.addClass('active');
+      $content = $($active[0].hash);
+      $links.not($active).each(function () {
+        $(this.hash).hide();
+      });
+      $(this).on('click', 'a', function(e){
+        $active.removeClass('active');
+        $content.hide();
+        $active = $(this);
+        $content = $(this.hash);
+        $active.addClass('active');
+        $content.show();
+        e.preventDefault();
+      });
+    });
+  });
+</script>
+</body>
+</html>

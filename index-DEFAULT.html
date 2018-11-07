@@ -1,0 +1,281 @@
+---
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+  <meta content="Bb-9_R3t_YIf2hlxgbUaf__9cNRDtf423EtTwV5mxsU" name="google-site-verification"/>
+  <meta content="b2d3e9c573a74ffea0cf126e762c002f" name="p:domain_verify"/>
+  <meta content="E3C6D0C7D77D3A13C3C553CAE5F409B5" name="msvalidate.01"/>
+  <meta content="09645acbf7ca3960" name="yandex-verification"/>
+  <link rel="canonical" href="https://htmleditor.pro/"/>
+  <title>HTML Editor - Online HTML, CSS, JavaScript Live Editor</title>
+  <meta name="description" content="Online HTML Editor. With HTML Editor Pro you can play and test your HTML, CSS, and JavaScript code with unique interface and live preview panel. The Editor is inspired by Codepen and JSFiddle but comes with more features. Try it your codes with HTML Editor Pro"/>
+
+  <!-- icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://htmleditor.pro/assets/favicons/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://htmleditor.pro/assets/favicons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://htmleditor.pro/assets/favicons/favicon-16x16.png"/>
+  <link rel="manifest" href="https://htmleditor.pro/assets/favicons/manifest.json"/>
+  <link rel="mask-icon" href="https://htmleditor.pro/assets/favicons/safari-pinned-tab.svg" color="#5bbad5"/>
+  <link rel="shortcut icon" href="https://htmleditor.pro/assets/favicons/favicon.ico"/>
+  <meta name="msapplication-config" content="https://htmleditor.pro/assets/favicons/browserconfig.xml"/>
+  <meta name="theme-color" content="#ffffff"/>
+  <meta name="apple-mobile-web-app-title" content="htmleditor.pro"/>
+  <meta name="application-name" content="htmleditor.pro"/>
+
+  <!-- Social -->
+  <meta property="og:title" content="HTML Editor - Online HTML, CSS, JavaScript Live Editor"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://htmleditor.pro/"/>
+  <meta property="og:image" content="https://htmleditor.pro/assets/img/htmleditor.png"/>
+  <meta property="og:site_name" content="htmleditor.pro"/>
+  <meta property="og:locale" content="en"/>
+  <meta property="og:description" content="Online HTML Editor. With HTML Editor Pro you can play and test your HTML, CSS, and JavaScript code with unique interface and live preview panel. The Editor is inspired by Codepen and JSFiddle but comes with more features. Try it your codes with HTML Editor Pro."/>
+
+  <meta name="twitter:card" property="twitter:card" content="summary"/>
+  <meta name="twitter:site" property="twitter:site" content="@halwarf"/>
+  <meta name="twitter:title" property="twitter:title" content="HTML Editor - Online HTML, CSS, JavaScript Live Editor"/>
+  <meta name="twitter:image" property="twitter:image" content="https://htmleditor.pro/assets/img/htmleditor.png"/>
+  <meta name="twitter:description" property="twitter:description" content="Online HTML Editor. With HTML Editor Pro you can play and test your HTML, CSS, and JavaScript code with unique interface and live preview panel. The Editor is inspired by Codepen and JSFiddle but comes with more features. Try it your codes with HTML Editor Pro."/>
+  <meta property="fb:app_id" content="1935119683409174"/>
+  <meta property="fb:admins" content="100007587970981"/>
+  <meta property="fb:profile_id" content="100007587970981"/>
+  <meta property="fb:pages" content="1678440685517624"/>
+
+  <link href="https://htmleditor.pro/assets/js/vendor/jquery.splitter/css/jquery.splitter.css" rel="stylesheet" />
+  <!-- gray theme - splitter
+  <link href="https://htmleditor.pro/assets/js/vendor/jquery.splitter/css/clean.jquery.splitter.css" rel="stylesheet" /> -->
+  <script src="https://htmleditor.pro/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="https://htmleditor.pro/assets/js/vendor/jquery.splitter/js/splitter.js"></script>
+
+  <script src="https://htmleditor.pro/node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/mode/xml/xml.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/mode/javascript/javascript.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/mode/css/css.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/lib/codemirror.css">
+  <script src="https://htmleditor.pro/node_modules/codemirror/addon/selection/active-line.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/addon/edit/matchbrackets.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/addon/comment/continuecomment.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/addon/comment/comment.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/addon/edit/closetag.js"></script>
+  <script src="https://htmleditor.pro/node_modules/codemirror/addon/edit/closebrackets.js"></script>
+  <link rel="stylesheet" href="https://htmleditor.pro/assets/css/app.css">
+  <script src="https://htmleditor.pro/assets/js/vendor/emmet/emmet.js"></script>
+  <script src="https://htmleditor.pro/node_modules/nprogress/nprogress.js"></script>
+  <link href="https://htmleditor.pro/node_modules/nprogress/nprogress.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/blackboard.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/cobalt.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/eclipse.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/mbo.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/mdn-like.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/monokai.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/pastel-on-dark.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/rubyblue.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/the-matrix.css">
+  <link rel="stylesheet" href="https://htmleditor.pro/node_modules/codemirror/theme/xq-light.css">
+  <script>
+  	jQuery(function($){
+  		NProgress.done(true);
+  	});
+  </script>
+  <script src="https://htmleditor.pro/assets/js/vendor/dw_fontsizer/js/dw_event.js" type="text/javascript"></script>
+  <script src="https://htmleditor.pro/assets/js/vendor/dw_fontsizer/js/dw_cookies.js" type="text/javascript"></script>
+  <script src="https://htmleditor.pro/assets/js/vendor/dw_fontsizer/js/dw_sizerdx.js" type="text/javascript"></script>
+  <script>
+  dw_fontSizerDX.setDefaults("px", 13, 12, 26, ['div.CodeMirror'] );
+
+  dw_Event.add( window, 'load', dw_fontSizerDX.init );
+  </script>
+  <script type="application/ld+json">
+  { "@context": "http://schema.org",
+    "@type": "WebPage",
+    "name": "HTML Editor - Online HTML, CSS, JavaScript Live Editor",
+    "headline": "HTML Editor - Online HTML, CSS, JavaScript Live Editor",
+    "inLanguage": "en","mainEntityOfPage": "True",
+    "publisher": {
+      "@type": "Organization",
+      "name": "htmleditor.pro",
+      "logo": {
+        "@type": "imageObject",
+        "url": "https://htmleditor.pro/assets/img/publisher-logo.png"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "https://plus.google.com/+HalwaRF/about"
+    },
+    "editor": "https://plus.google.com/+FadlullahFadul/about",
+    "url": "https://htmleditor.pro/",
+    "description": "Online HTML Editor. With HTML Editor Pro you can play and test your HTML, CSS, and JavaScript code with unique interface and live preview panel. The Editor is inspired by Codepen and JSFiddle but comes with more features. Try it your codes with HTML Editor Pro."
+  }
+  </script>
+</head>
+<body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92050092-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-92050092-9');
+</script>
+  
+  <div id="loader"></div>
+  <header id="header" role="banner">
+    <div id="headermenu" role="navigation">
+      <div class="about">
+      <p><span class="brand"><span class="brand-span">HTMLEditor</span>.pro</span></p>
+      </div>
+      <div class="htmledito-settings">
+        <p class="theme-option"><span>Themes: </span><select onchange="selectTheme()" id=select>
+        <option selected>default</option>
+        <option>3024-day</option>
+        <option>blackboard</option>
+        <option>cobalt</option>
+        <option>eclipse</option>
+        <option>mbo</option>
+        <option>mdn-like</option>
+        <option>monokai</option>
+        <option>pastel-on-dark</option>
+        <option>rubyblue</option>
+        <option>the-matrix</option>
+        <option>xq-light</option>
+        </select>
+        </p>
+      </div>
+
+      <div class="font-sizer">
+        <span id="sizer">Font Size:&nbsp;&nbsp;<a class="increase" href="#" title="Increase text size"><img width="16" height="16" src="https://htmleditor.pro/assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a><a class="decrease" href="#" title="Decrease text size"><img width="16" height="16" src="https://htmleditor.pro/assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a><a class="reset" href="#" title="Restore default font-sizes"><img width="16" height="16" src="https://htmleditor.pro/assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
+      </div>
+      <div class="run-button">
+        <input type="button" value="Run (JS)" onClick="updatePreview();" id="runcodebutton" class="topmenubutton">
+      </div>
+
+      <div class="generatormenu">
+        <input type="button" value="Library"  id="librarymenubutton" class="topmenubutton">
+        <div id="librarymenu"  class="topmenu">
+          <div class="css-libraries">
+            <div>Text | Images | Audio | Video</div>
+            <input type="button" value="Lorem" id="generator-ipsum">
+            <input type="button" value="&lt;img src&gt; 1" id="insert-img-src1">
+            <input type="button" value="&lt;img src&gt; 2" id="insert-img-src2">
+            <input type="button" value="&lt;audio&gt;" id="insert-audio">
+            <input type="button" value="&lt;video&gt;" id="insert-video">
+          </div>
+          <div class="css-libraries">
+            <div>CSS Libraries </div>
+            <input type="button" value="url(image)" id="insert-url-img">
+            <!-- add custom CSS Library -->
+            <input type="button" value="normalize.css" id="normalizecss" onClick="appendJSLib(txt)">
+
+            <!-- Bootstrap 3    // This is bootstrap library Example in library.js file-->
+            <input type="button" value="Bootstrap 3" id="bootstrap3" onClick="appendJSLib(txt)">
+
+            <input type="button" value="Bootstrap 4" id="bootstrap4" onClick="appendJSLib(txt)">
+            <input type="button" value="uikit 2" id="uikit2" onClick="appendJSLib(txt)">
+            <input type="button" value="uikit 3" id="uikit3" onClick="appendJSLib(txt)">
+            <input type="button" value="foundation" id="foundation" onClick="appendJSLib(txt)">
+            <input type="button" value="mdl" id="mdl" onClick="appendJSLib(txt)">  
+            <input type="button" value="Font Awesome" id="fontawesome" onClick="appendJSLib(txt)">
+          </div>
+          <div class="js-libraries jquery">
+            <div>JavaScript Libraries </div>
+            <!-- add custom Javascript Library -->
+            <input type="button" value="jQuery 1x" id="jquery1" onClick="appendJSLib(txt)">
+            <input type="button" value="jQuery 2x" id="jquery2" onClick="appendJSLib(txt)">
+            <input type="button" value="jQuery 3x" id="jquery3" onClick="appendJSLib(txt)">
+            <input type="button" value="jQuery UI" id="jqueryui" onClick="appendJSLib(txt)">
+            <input type="button" value="MooTools" id="MooTools" onClick="appendJSLib(txt)">
+          </div>
+        </div>
+
+        <input type="button" value="Settings"  id="settingsmenubutton" class="topmenubutton">
+        <div id="settingsmenu"  class="topmenu">
+          <ul>
+            <li><input type="checkbox"  id="autopreviewcheckbox" checked="checked" /> Auto Run Js</li>
+            <li><input type="checkbox"  id="linewrappingcheckbox"/> Word Wrap</li>
+            <li><input type="checkbox"  id="autoclosetagscheckbox" checked="checked"/> Auto Close Tag</li>
+            <li><input type="checkbox"  id="layerpreview" /> Highlight Layer Mode</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="Dmenu-right">
+        <input type="button" id="previewcompact" value="&nbsp;" title="compact view" onClick="previewdefault();" />
+        <input type="button" id="previewnojs" value="&nbsp;" title="no js editor" onClick="nojsview();" />
+        <input type="text" value="" id="previewsizewidth" placeholder="Width" />
+        <input type="text" value="" id="previewsizeheight" placeholder="Height" />
+        <input type="button" id="fullpreview" value="&nbsp;" onClick="fullpreview();" />
+        <input type="button" id="previewtablet" value="&nbsp;" onClick="previewdefault();" />
+        <input type="button" id="previewphone-h" value="&nbsp;" onClick="previewdefault();" />
+        <input type="button" id="previewphone-w" value="&nbsp;" onClick="previewdefault();" />
+    </div>
+</header>
+<main id="content" class="article">
+  <div id="widget">
+    <div id="foo">
+      <div id="codehtml">
+        <div class="codetypelabel" id="codetypelabelhtml">HTML</div>
+        <textarea id="codeeditorhtml" name="codeeditorhtml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 id=&quot;heading&quot;&gt;HTML&lt;/h1&gt;
+
+    &lt;p contenteditable=&quot;true&quot;&gt;Welcome to HTML Editor Pro.&lt;/p&gt;
+    &lt;p contenteditable=&quot;true&quot;&gt;Online HTML, CSS and JavaScript editor with live preview.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</textarea>
+    </div>
+    <div id="codecss">
+      <div class="codetypelabel" id="codetypelabelcss">CSS</div>
+      <textarea id="codeeditorcss" name="codeeditorcss">
+/* CSS codes */
+
+h1 {
+  font-family: Arial,sans-serif;
+  color: tomato;
+}
+      </textarea>
+    </div>
+  </div>
+    <div id="bar">
+      <div id="codejs">
+        <div class="codetypelabel" id="codetypelabeljs">JavaScript</div>
+        <textarea id="codeeditorjs" name="codeeditorjs">// JavaScript codes
+
+var headerTag = document.getElementById('heading');
+headerTag.innerText += " Editor Pro";</textarea>
+      </div>
+      <div id="codepreview">
+        <div id="previewmask"></div>
+        <div id="previewoutputsize">Output: <span id="outputsizenumber"></span></div>
+        <iframe id="preview" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="https://htmleditor.pro/assets/js/app.js"></script>
+<script src="https://htmleditor.pro/assets/js/library.js"></script>
+<script>
+      var HideMenuDialog = function(){
+    $('#librarymenu').hide();
+    $('#settingsmenu').hide();
+  }
+      $('textarea')
+          .focus(HideMenuDialog)
+</script>
+</body>
+</html>

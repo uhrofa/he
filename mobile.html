@@ -1,0 +1,198 @@
+---
+layout: mobile
+title: "HTMLEditor Mobile | Tabbed Version"
+site_name: "HTMLEditor"
+permalink: "/mobile"
+canonical: "https://htmleditor.apacara.com/mobile"
+lang: en
+metadata:
+  description: "HTMLEditor Mobile | Tabbed Version is HTML Editor, CSS Editor and Javascript Editor script in one simple and user-friendly UI. It is build with HTML5, CSS3 and many javascript libraries"
+image: "htmledito.png"
+---
+    <div id="loader"></div>
+
+    <header id="header" role="banner">
+      <div id="headermenu" role="navigation">
+        <div class="about">
+          <p><span class="brand"><span class="brand-span">HTML</span>Editor</span></p>
+        </div>
+        <div class="htmledito-settings">
+          <p class="theme-option"><span>Themes: </span>
+            <select onchange="selectTheme()" id=select>
+              <option selected>default</option>
+              <option>3024-day</option>
+              <option>blackboard</option>
+              <option>cobalt</option>
+              <option>eclipse</option>
+              <option>mbo</option>
+              <option>mdn-like</option>
+              <option>monokai</option>
+              <option>pastel-on-dark</option>
+              <option>rubyblue</option>
+              <option>the-matrix</option>
+              <option>xq-light</option>
+            </select>
+          </p>
+        </div>
+
+        <div class="font-sizer">
+          <span id="sizer">Font Size:&nbsp;&nbsp;<a class="increase" href="#" title="Increase text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/plus.png" alt="" /></a><a class="decrease" href="#" title="Decrease text size"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/minus.png" alt="" /></a><a class="reset" href="#" title="Restore default font-sizes"><img width="16" height="16" src="assets/js/vendor/dw_fontsizer/images/reset.png" alt="" /></a></span>
+        </div>
+        <div class="run-button">
+          <input type="button" value="Run (JS)" onClick="updatePreview();" id="runcodebutton" class="topmenubutton">
+        </div>
+
+        <div class="generatormenu">
+          <input type="button" value="Library"  id="librarymenubutton" class="topmenubutton">
+          <div id="librarymenu"  class="topmenu">
+            <div class="css-libraries">
+              <div>Text | Images | Audio | Video</div>
+              <input type="button" value="Lorem" id="generator-ipsum">
+              <input type="button" value="&lt;img src&gt; 1" id="insert-img-src1">
+              <input type="button" value="&lt;img src&gt; 2" id="insert-img-src2">
+              <input type="button" value="&lt;audio&gt;" id="insert-audio">
+              <input type="button" value="&lt;video&gt;" id="insert-video">
+            </div>
+
+            <div class="css-libraries">
+              <div>CSS Libraries | CSS Framework</div>
+              <input type="button" value="url(image)" id="insert-url-img">
+              <!-- add custom CSS Library -->
+              <input type="button" value="normalize.css" id="normalizecss">
+              <!-- Bootstrap 3    // This is bootstrap library Example in library.js file-->
+              <input type="button" value="Bootstrap 3" id="bootstrap3">
+              <input type="button" value="Bootstrap 4" id="bootstrap4">
+              <input type="button" value="uikit 2" id="uikit2">
+              <input type="button" value="uikit 3" id="uikit3">
+              <br/>
+              <input type="button" value="foundation" id="foundation">
+              <input type="button" value="Bulma" id="bulma">
+              <input type="button" value="Materialize" id="materialize">
+              <input type="button" value="Semantic UI" id="semanticui">
+              <input type="button" value="MDL" id="mdl" title="Material Design Lite">
+              <input type="button" value="Font Awesome" id="fontawesome">
+            </div>
+          <div class="js-libraries jquery">
+            <div>JavaScript Libraries </div>
+            <input type="button" value="jQuery 1x" id="jquery1" onClick="appendJSLib(txt)">
+            <input type="button" value="jQuery 2x" id="jquery2" onClick="appendJSLib(txt)">
+            <input type="button" value="jQuery 3x" id="jquery3" onClick="appendJSLib(txt)">
+            <input type="button" value="jQuery UI" id="jqueryui" onClick="appendJSLib(txt)">
+            <input type="button" value="MooTools" id="MooTools" onClick="appendJSLib(txt)">
+          </div>
+        </div>
+
+        <input type="button" value="Settings"  id="settingsmenubutton" class="topmenubutton">
+        <div id="settingsmenu"  class="topmenu">
+          <ul>
+            <li><input type="checkbox"  id="autopreviewcheckbox" checked="checked" /> Auto Run Js</li>
+            <li><input type="checkbox"  id="linewrappingcheckbox" /> Word Wrap</li>
+            <li><input type="checkbox"  id="autoclosetagscheckbox" checked="checked"/> Auto Close Tag</li>
+            <li><input type="checkbox"  id="layerpreview" /> Highlight Layer Mode</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="article" id="content" role="main">
+  <ul class='tabs'>
+  	<li><a href='#tab1' accesskey="h">HTML</a></li>
+  	<li><a href='#tab2' accesskey="c">CSS</a></li>
+  	<li><a href='#tab3' accesskey="j">JS</a></li>
+    <li><a href='#tab4' accesskey="o">OUTPUT</a></li>
+  </ul>
+  <div id='tab1'>
+    <div id="codehtml">
+      <textarea id="codeeditorhtml" name="codeeditorhtml">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;style&gt;
+  &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+    &lt;p&gt;Happy Coding! &lt;/p&gt;
+    &lt;script&gt;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </textarea>
+    </div>
+  </div>
+	<div id='tab2'>
+    <div id="codecss">
+      <textarea id="codeeditorcss" name="codeeditorcss">
+h1 {
+  font-family: sans-serif;
+  color: tomato;
+}
+      </textarea>
+    </div>
+  </div>
+	<div id='tab3'>
+    <div id="codejs">
+      <textarea id="codeeditorjs" name="codeeditorjs"></textarea>
+    </div>
+  </div>
+	<div id='tab4'>
+    <div id="codepreview">
+      <div id="previewmask"></div>
+      <div id="previewoutputsize">Output: <span id="outputsizenumber"></span></div>
+      <iframe id="preview" sandbox="allow-scripts allow-same-origin"></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/library.js"></script>
+<script>
+      var HideMenuDialog = function(){
+    $('#librarymenu').hide();
+    $('#settingsmenu').hide();
+  }
+      $('textarea')
+          .focus(HideMenuDialog)
+</script>
+
+<script>
+	// Wait until the DOM has loaded before querying the document
+	$(document).ready(function(){
+		$('ul.tabs').each(function(){
+			// For each set of tabs, we want to keep track of
+			// which tab is active and it's associated content
+			var $active, $content, $links = $(this).find('a');
+
+			// If the location.hash matches one of the links, use that as the active tab.
+			// If no match is found, use the first link as the initial active tab.
+			$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+			$active.addClass('active');
+
+			$content = $($active[0].hash);
+
+			// Hide the remaining content
+			$links.not($active).each(function () {
+				$(this.hash).hide();
+			});
+
+			// Bind the click event handler
+			$(this).on('click', 'a', function(e){
+				// Make the old tab inactive.
+				$active.removeClass('active');
+				$content.hide();
+
+				// Update the variables with the new link and content
+				$active = $(this);
+				$content = $(this.hash);
+
+				// Make the tab active.
+				$active.addClass('active');
+				$content.show();
+
+				// Prevent the anchor's default click action
+				e.preventDefault();
+			});
+		});
+	});
+</script>

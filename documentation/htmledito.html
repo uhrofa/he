@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>HTMLEdito | Documentation</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="navbar-brand"><img src="images/logo.png" alt=""></span>
+				</div>
+				<nav class="collapse navbar-collapse" role="navigation">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="https://www.codecanyon/user/apacara/" target="_blank">Support</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</nav>
+
+		<div id="masthead">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>HTMLEdito</h1>
+						<p>This document contains general information and step by step guidelines<br /> on how to get started with HTMLEdito.</p>
+						<span class="doc-button"><a href="#getting-started">Documentation</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- main content-->
+		<div id="#content" class="container">
+			<div class="row">
+			  <!--left column -->
+				<div class="col-md-3" id="col-left">
+					<ul class="nav nav-stacked" id="sidebar">
+						<li><a href="#getting-started">Getting started</a></li>
+            <li><a href="#themes">Themes</a></li>
+            <li><a href="#font-size">Font Size</a></li>
+            <li><a href="#run-js">Run (JS)</a></li>
+            <li><a href="#library">Library</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="#preview-size">Preview Size</a></li>
+						<li><a href="#support">Support</a></li>
+            <li><a href="#credits">Credits</a></li>
+            <li><a href="#emmet">Emmet</a></li>
+					</ul>
+				</div><!--/left column-->
+
+				<!--right column -->
+  		  <div class="col-md-9" id="col-right">
+          <h2 id="getting-started" class="first-heading">Getting started</h2>
+          <p><strong>HTMLEdito</strong>, meet the nice and simple HTML, CSS and Javascript editor. Just Run <strong>index.html</strong> file with your modern browser. No need installation and you are ready to go.</p>
+          <p><em>HTMLEdito</em> is a client-side app, no need server. The only one thing you should be aware is <strong>NEVER REFRESH</strong> or <strong>CLOSE TAB/WINDOW</strong> Browser when you are working with final code. Always save to another place (native code editor). If you refresh the browser, it would reload the default code. So, all your codes that have been written would be lost.</p>
+          <img class="img-responsive" src="images/htmledito.png" alt="">
+          <h2 id="themes">Themes</h2>
+          <img class="img-responsive" src="images/htmledito-themes.png" alt=""><br>
+          <img class="img-responsive" src="images/htmledito-themes2.png" alt="">
+          <p>Selectable code editor themes. Feel free to choose any themes whatever you want.</p>
+
+          <h2 id="font-size">Font Size</h2>
+          <img class="img-responsive" src="images/htmledito-font-size.png" alt="">
+
+          <h2 id="run-js">Run (JS)</h2>
+          <img class="img-responsive" src="images/htmledito-run-js.png" alt="">
+<p>Run (JS) button is used for Run javascript code manually. This button is working if you disable (Uncheck) <strong>Auto Run JS</strong> in menu <a href="#settings">Setting</a>.</p>
+
+          <h2 id="library">Library</h2>
+          <img class="img-responsive" src="images/htmledito-library.png" alt="">
+<p>Add custom library with just a click button. This is very useful when you are working with popular HTML, CSS and Javascript Library like bootstrap, uikit, Material Design Lite, jQuery, jQueryUI and so on. You can add custom library by editing <code>library.js</code> in assets folder and <code>index.html</code> for custom menu.</p>
+
+          <h2 id="settings">Settings</h2>
+          <img class="img-responsive" src="images/htmledito-settings.png" alt="">
+<p>This settings is optional, give it a try to meet your need. The available settings are as follow:</p>
+<ul>
+  <li><strong>Auto Run JS</strong>. If you enable this, all your javascript codes in javascript panel would be run automatically and vice versa. Enabled by default.</li>
+<li><strong>Word Wrap</strong>. Wrap the codes to a newline in all panels you are working with. Disabled by default.</li>
+<li><strong>Auto Close Tag</strong>. Write the first tag, and the closing tag would be created for you automatically.</li>
+<li><strong>Highlight Layer Mode</strong>. Layer mode in the preview panel would be highlighted.</li>
+</ul>
+
+          <h2 id="preview-size">Preview Size</h2>
+          <img class="img-responsive" src="images/htmledito-preview-size.png" alt="">
+<p>Work with any size preview window. Add your custom width and height in the input box. This is useful to test your code through mobile viewport.</p>
+
+            <h2 id="emmet">Emmet</h2>
+            <p><strong>HTMLEdito</strong> supports emmet. Please, refer to <a href="https://docs.emmet.io/">Emmet Documentation</a>. You can use <em>Default keybindings:</em></p>
+            <ul>
+              <li><code>Cmd-E</code> or <code>Tab</code>: Expand abbreviation</li>
+              <li><code>Cmd-D</code>: Balance Tag (matches opening and closing tag pair)</li>
+              <li><code>Shift-Cmd-D</code>: Balance Tag Inward</li>
+              <li><code>Shift-Cmd-A</code>: Wrap With Abbreviation</li>
+              <li><code>Ctrl-Alt-Right</code>: Next Edit Point</li>
+              <li><code>Ctrl-Alt-Left</code>: Previous Edit Point</li>
+              <li><code>Cmd-L</code>: Select line</li>
+              <li><code>Cmd-Shift-M</code>: Merge Lines</li>
+              <li><code>Cmd-/</code>: Toggle Comment</li>
+              <li><code>Cmd-J</code>: Split/Join Tag</li>
+              <li><code>Cmd-K</code>: Remove Tag</li>
+              <li><code>Shift-Cmd-Y</code>: Evaluate Math Expression</li>
+              <li><code>Ctrl-Up</code>: Increment Number by 1</li>
+              <li><code>Ctrl-Down</code>: Decrement Number by 1</li>
+              <li><code>Ctrl-Alt-Up</code>: Increment Number by 0.1</li>
+              <li><code>Ctrl-Alt-Down</code>: Decrement Number by 0.1</li>
+              <li><code>Shift-Ctrl-Up</code>: Increment Number by 10</li>
+              <li><code>Shift-Ctrl-Down</code>: Decrement Number by 10</li>
+              <li><code>Shift-Cmd-.</code>: Select Next Item</li>
+              <li><code>Shift-Cmd-,</code>: Select Previous Item</li>
+              <li><code>Cmd-B</code>: Reflect CSS Value</li>
+            </ul>
+
+          <h2 id="support">Support</h2>
+          <p>Email: <img src="images/mail.png" /></p>
+
+          <h2 id="credits">Credits</h2>
+            <ul>
+              <li>Codemirror: <a href="http://codemirror.net" target="_blank" rel="nofollow" >http://codemirror.net</a></li>
+              <li>Bootstrap: <a href="http://getbootstrap.com/" target="_blank" rel="nofollow" >http://getbootstrap.com/</a></li>
+              <li>uikit: <a href="https://getuikit.com/" target="_blank" rel="nofollow" >https://getuikit.com/</a></li>
+              <li>jQuery: <a href="http://jquery.com/" target="_blank" rel="nofollow" >http://jquery.com/</a></li>
+              <li>jQueryui: <a href="https://jqueryui.com/" target="_blank" rel="nofollow" >https://jqueryui.com/</a></li>
+              <li>FontAwesome: <a href="http://fontawesome.io/" target="_blank" rel="nofollow" >http://fontawesome.io/</a></li>
+              <li>icomoon: <a href="https://icomoon.io/" target="_blank" rel="nofollow" >https://icomoon.io/</a></li>
+              <li>mootools: <a href="https://mootools.net/" target="_blank" rel="nofollow" >https://mootools.net/</a></li>
+              <li>emmet: <a href="https://emmet.io/" target="_blank" rel="nofollow" >https://emmet.io/</a></li>
+              <li>Normalize.css: <a href="https://necolas.github.io/normalize.css/" target="_blank" rel="nofollow" >https://necolas.github.io/normalize.css/</a></li>
+              <li>NProgress.js: <a href="http://ricostacruz.com/nprogress/" target="_blank" rel="nofollow" >http://ricostacruz.com/nprogress/</a></li>
+              <li>prismjs: <a href="http://prismjs.com/" target="_blank" rel="nofollow" >http://prismjs.com/</a></li>
+              <li>code-prettify: <a href="https://github.com/google/code-prettify" target="_blank" rel="nofollow" >https://github.com/google/code-prettify</a></li>
+              <li>gemdl.io: <a href="https://getmdl.io/" target="_blank" rel="nofollow" >https://getmdl.io/</a></li>
+              <li>freepik: <a href="http://www.freepik.com" target="_blank" rel="nofollow" >http://www.freepik.com</a></li>
+              <li>blender: <a href="https://peach.blender.org/" target="_blank" rel="nofollow" >https://peach.blender.org/</a></li>
+              <li>Google Fonts (Roboto, Montserrat): <a href="https://fonts.google.com" target="_blank" rel="nofollow" >https://fonts.google.com</a></li>
+            </ul>
+          </div> <!--/right column -->
+			  </div>  <!--/row -->
+			  <hr>
+			</div> <!--/content -->
+
+      <!-- site footer -->
+  		<div id="footer">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-6 col-left">
+  			      <p>Copyright &copy; 2018 <a rel="nofollow" target="_blank" href="https://www.codecanyon/user/apacara/">apacara</a></p>
+            </div>
+            <div class="col-sm-6 col-right">
+              <p><a rel="nofollow" target="_blank" href="https://codecanyon.net/licenses/standard">License</a></p>
+            </div>
+          </div>
+        </div>
+
+  		</div>
+
+      <script src="js/jquery-1.11.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!--<script type="text/javascript" src="js/SmoothScroll.js"></script>-->
+      <script src="js/scripts.js"></script>
+	</body>
+</html>
