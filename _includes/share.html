@@ -1,0 +1,22 @@
+<section id="social-share">
+  <h5 class="bg-light w-100 py-3 px-3 my-4 mt-5 rounded text-md">
+      <i class="fa fa-share pr-2"></i>SHARE
+  </h5>
+  <div class="social-share">
+    <a href="https://facebook.com/sharer.php?u={{ site.url | url_encode }}{{ page.url | url_encode }}" rel="nofollow" target="_blank" class="btn social-btn btn-facebook">
+      <i class="fa fa-facebook fa-lg"></i>
+    </a>
+    <a href="https://twitter.com/intent/tweet?url={{ site.url | url_encode }}{{ page.url | url_encode }}&text={{ page.title | url_encode }}&via={{ site.twitter.tw_username }}&hashtags={{ page.taxonomy.category }}" rel="nofollow" target="_blank" class="btn social-btn btn-twitter">
+      <i class="fa fa-twitter fa-lg"></i>
+    </a>
+    <a href="https://plus.google.com/share?url={{ site.url | url_encode }}{{ page.url | url_encode }}&text={{ page.title | url_encode }}&hl={{ page.language | default: site.language }}" rel="nofollow" target="_blank" class="btn social-btn btn-google">
+      <i class="fa fa-google-plus fa-lg"></i>
+    </a>
+    <a href="https://telegram.me/share/url?url={{ site.url | url_encode }}&text={{ page.title | url_encode }}" rel="nofollow" target="_blank" class="btn social-btn btn-telegram">
+      <i class="fa fa-telegram fa-lg"></i>
+    </a>
+    <a href="https://web.whatsapp.com/send?l=en&text={{ site.url | url_encode }}{{ page.url | url_encode }}" rel="nofollow" target="_blank" class="btn social-btn btn-whatsapp">
+      <i class="fa fa-whatsapp fa-lg"></i>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<section class="list-links">
+  <h5 class="bg-light w-100 d-block py-3 px-3 m-0 text-center">
+      <i class="fa fa-css3 pr-2"></i>CSS TUTORIAL
+  </h5>
+  <ul class="list-unstyled list-links px-3 px-lg-0 text-sm">
+  {%- assign page_collection = site.css  -%}
+  {%- for item in page_collection limit:100 -%}
+    {%- if item.title == page.title -%}
+      {%- continue -%}
+    {%- endif -%}
+    {% assign item_author = site.data.people[item.author] %}
+    <li>
+      <a href="{{ item.url }}">
+        <span>{{ item.short_title | truncate: 25 }}</span>
+      </a>
+    </li>
+  {%- endfor -%}
+  </ul>
+</section>

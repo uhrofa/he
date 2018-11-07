@@ -1,0 +1,25 @@
+- slug: "html"
+  title: "HTML"
+
+- slug: "css"
+  title: "CSS"
+
+- slug: "javascript"
+  title: "JavaScript"
+
+- slug: "bootstrap"
+  title: "Bootstrap"
+
+- slug: "mariadb"
+  title: "MariaDB"
+
+- slug: "amp"
+  title: "AMP"
+
+- slug: "php"
+  title: "PHP"
+  hidden: true
+
+- slug: "apa"
+  title: "APA"
+  hidden: true

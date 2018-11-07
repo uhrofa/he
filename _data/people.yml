@@ -1,0 +1,20 @@
+halwa:
+  name: "Halwa RF"
+  profile: "https://plus.google.com/+HalwaRF"
+  url: "https://www.youtube.com/halwarf"
+  avatar: "halwa.jpg"
+  gender: female
+  description: "Being a blogger is not just like a hobby but a true life. Simple but beautiful that's enough."
+
+Lorem:
+  name: "Lorem Ipsum"
+  profile: "https://plus.google.com/+HalwaRF"
+  avatar:
+
+dul:
+  name: "Fadlullah Fadul"
+  profile: "https://plus.google.com/+FadlullahFadul"
+  url: "https://dul.web.id/"
+  avatar: "dul.jpg"
+  gender: male
+  description: "dul adalah sosok yang sudah lama melintang di dunia blogger dan web. Tutorial yang diberikannya seputar web design and development."

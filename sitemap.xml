@@ -1,0 +1,32 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-amp.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-apa.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-bootstrap.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-css.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-html.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-javascript.xml</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.apacara.com/sitemap-mariadb.xml</loc>
+  </sitemap>
+</sitemapindex>

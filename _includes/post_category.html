@@ -1,0 +1,68 @@
+{%- assign index_category = include.index_category -%}
+
+<main class="container content-wrapper">
+    <div class="content" id="content">
+      <div class="post-wrapper">
+
+      {%- include banner.html -%} 
+
+        <article class="post post-category">
+          {%- include ads/top.html -%}
+
+          <div class="mt-4 summary">
+{%- for post in site[index_category] reversed limit: 6 -%}
+  {%- if forloop.index == 6 -%}
+    {%- assign index_post_url = post.url -%}
+    {%- assign index_post_title = post.title -%}
+    {%- continue -%}
+  {%- endif -%}
+{% assign post_author = site.data.people[post.author] %}
+              <article class="mb-4 d-md-flex item-wrapper">
+                {%- if post.images.figure -%}
+                <div class="img-responsive m-0 mr-md-4">
+                  <a href="{{ post.url | absolute_url }}" class=""><img class="img-fluid" src="{{ post.images.figure | prepend: site.images_path.images | absolute_url }}" width="350" height="" alt="233" /></a>
+                </div>
+                {%- endif -%}
+                <div class="mr-auto w-100">
+                  <h2 class="h4 mb-2 p-0 mt-3 mt-md-0 b-title"><a href="{{ post.url }}" class="text-facebook">{{ post.title }}</a></h2>
+
+                  <div class="post-meta mb-2 pb-3 mt-4 text-muted text-xs a-title">
+                      <a href="/category/{{ post.tag.first }}" class="px-2 py-1 text-dark font-weight-normal">
+                          <i class="fa fa-folder pr-2"></i>{{ post.tag.first | upcase }}
+                      </a>
+                      <i class="px-2 fa fa-circle-thin text-light"></i>
+                      <span>
+                          <i class="fa fa-user pr-2"></i>{{ post_author.name | default: site.author.name }}
+                          {%- comment -%}
+                          <a class="text-muted" href="{{ post_author.url }}">
+                              <i class="fa fa-user pr-2"></i>{{ post_author.name | default: site.author.name }}
+                          </a>
+                          {%- endcomment -%}
+                      </span>
+                      {%- comment -%}
+                      <i class="px-2 fa fa-circle-thin text-light"></i>
+                      <span>
+                          <i class="fa fa-calendar pr-2 text-muted"></i>{% if post.dateModified %}{{ post.dateModified | date: "%B %-d, %Y" }}{% else %}{{ post.date | date: "%B %-d, %Y"}}{% endif %}
+                      </span>
+                      {%- endcomment -%}
+                  </div>
+                  <p class="excerp">{{ post.content | strip_html | strip_newlines | truncatewords:20  }}</p>
+                </div>
+              </article>
+{%- endfor -%}
+          </div>
+        </article>
+
+        {%- if index_post_url  -%}
+        <div class="border-top border-bottom w-100 py-3 my-3 mt-2 text-md clearfix b-title">
+          <a class="float-right" href="{{ index_post_url }}" title="{{ index_post_title }}">
+            <span class="btn btn-sm btn-outline-primary btn-rounded">Next Article <i class="fa fa-angle-right"></i></span>
+          </a>
+        </div>
+        {%- endif -%}
+
+      </div>
+    </div>
+
+    {%- include aside.html -%}
+  </main>

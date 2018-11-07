@@ -1,0 +1,22 @@
+{% for tag in page.tag.first %}
+{% case tag contains %}
+{% when "html" %}
+{% include sidebar/widget_html.html %}
+{% when "css" %}
+{% include sidebar/widget_css.html %}
+{% when "js" %}
+{% include sidebar/widget_js.html %}
+{% when "jquery" %}
+{% include sidebar/widget_jquery.html %}
+{% when "amp" %}{% include sidebar/widget_amp.html %}
+{% when "php" %}
+{% include sidebar/widget_php.html %}
+{% when "mariadb" %}
+{% include sidebar/widget_mariadb.html %}
+{% when "bootstrap3" %}
+{% include sidebar/widget_bootstrap3.html %}
+{% when "bootstrap4" %}
+{% include sidebar/widget_bootstrap4.html %}
+{% else %}
+{% endcase %}
+{% endfor %}

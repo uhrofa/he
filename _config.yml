@@ -1,3 +1,9 @@
 url: ""
 baseurl: ""
 permalink: /:categories/:title
+
+collections_dir: tutorial
+collections:
+  css:
+    output: true
+    permalink: /tutorial/css/:title.html
