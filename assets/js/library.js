@@ -35,9 +35,9 @@ $(document).ready(function(){
 	// Put your tags between single quotes (' ') the quotes before + sign
 	txt ='<meta charset="utf-8" />' + "\n";   /*  <meta charset="utf-8" /> is inside single quotes */
 	txt +='<meta name="viewport" content="width=device-width, initial-scale=1.0" />' + "\n";
-	txt +='<link rel="stylesheet" href="node_modules/bootstrap/v3/css/bootstrap.min.css" />' + "\n";
-  txt +="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
-	txt +='<script src="node_modules/bootstrap/v3/js/bootstrap.min.js"></script>' + "\n";
+	txt +='<link rel="stylesheet" href="assets/js/vendor/bootstrap/dist/css/bootstrap.min.css" />' + "\n";
+  txt +="  <"+"script src=\"assets/js/vendor/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
+	txt +='<script src="assets/js/vendor/bootstrap/dist/js/bootstrap.min.js"></script>' + "\n";
   // need more line? just add the following (remove comment //):
   // txt +=' ' + "\n";
 	appendJSLib(txt);  });
@@ -48,8 +48,8 @@ $(document).ready(function(){
 	txt ="  <"+"meta charset=\"utf-8\""+" />"+"\n";
 	txt +="  <"+"meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\""+" />"+"\n";
 	txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/bootstrap/dist/css/bootstrap.min.css\""+" />"+"\n";
-	txt +="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
-	txt +="  <"+"script src=\"node_modules/bootstrap/dist/js/bootstrap.min.js\">"+"</"+"script"+">";
+	txt +="  <"+"script src=\"node_modules/jquery/dist/jquery.min.js\">"+"</"+"script"+">"+"\n";
+	txt +="  <"+"script src=\"node_modules/bootstrap/dist/js/bootstrap.bundle.min.js\">"+"</"+"script"+">";
 	appendJSLib(txt);  });
 
 	// normalize.css
@@ -66,18 +66,18 @@ $(document).ready(function(){
 	$("#uikit2").click(function() {
 	txt ="  <"+"meta charset=\"utf-8\""+" />"+"\n";
 	txt +="  <"+"meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\""+" />"+"\n";
-  txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/uikit/v2/css/uikit.min.css\""+" />"+"\n";
-	txt +="  <"+"script src=\"node_modules/jquery/jquery-1.12.4.min.js\">"+"</"+"script"+">"+"\n";
-	txt +="  <"+"script src=\"node_modules/uikit/v2/js/uikit.min.js\">"+"</"+"script"+">"+"\n";
+  txt +="  <"+"link rel=\"stylesheet\" href=\"assets/js/vendor/uikit/css/uikit.min.css\""+" />"+"\n";
+	txt +="  <"+"script src=\"assets/js/vendor/jquery/jquery-1.12.4.min.js\">"+"</"+"script"+">"+"\n";
+	txt +="  <"+"script src=\"assets/js/vendor/uikit/js/uikit.min.js\">"+"</"+"script"+">"+"\n";
 	appendJSLib(txt);  });
 
 	// uikit v3
 	$("#uikit3").click(function() {
 	txt ="  <"+"meta charset=\"utf-8\""+" />"+"\n";
 	txt +="  <"+"meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\""+" />"+"\n";
-  txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/uikit/v3/css/uikit.min.css\""+" />"+"\n";
-	txt +="  <"+"script src=\"node_modules/jquery/jquery-3.2.1.min.js\">"+"</"+"script"+">"+"\n";
-	txt +="  <"+"script src=\"node_modules/uikit/v3/js/uikit.min.js\">"+"</"+"script"+">"+"\n";
+  txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/uikit/dist/css/uikit.min.css\""+" />"+"\n";
+	txt +="  <"+"script src=\"node_modules/jquery/dist/jquery.min.js\">"+"</"+"script"+">"+"\n";
+	txt +="  <"+"script src=\"node_modules/uikit/dist/js/uikit.min.js\">"+"</"+"script"+">"+"\n";
 	appendJSLib(txt);  });
 
   // foundation
@@ -85,7 +85,7 @@ $(document).ready(function(){
 	txt ="  <"+"meta charset=\"utf-8\""+" />"+"\n";
 	txt +="  <"+"meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\""+" />"+"\n";
 	txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/foundation-sites/dist/css/foundation.min.css\""+" />"+"\n";
-	txt +="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
+	txt +="  <"+"script src=\"node_modules/jquery/dist/jquery.min.js\">"+"</"+"script"+">"+"\n";
 	txt +="  <"+"script src=\"node_modules/foundation-sites/dist/js/foundation.min.js\">"+"</"+"script"+">";
 	appendJSLib(txt);  });
 
@@ -101,7 +101,7 @@ $(document).ready(function(){
 	txt ="  <"+"meta charset=\"utf-8\""+" />"+"\n";
 	txt +="  <"+"meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\""+" />"+"\n";
 	txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/materialize-css/dist/css/materialize.min.css\""+" />"+"\n";
-  txt +="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
+  txt +="  <"+"script src=\"node_modules/jquery/dist/jquery.min.js\">"+"</"+"script"+">"+"\n";
 	txt +="  <"+"script src=\"node_modules/materialize-css/dist/js/materialize.min.js\">"+"</"+"script"+">";
 	appendJSLib(txt);  });
 
@@ -110,7 +110,7 @@ $(document).ready(function(){
 	txt ="  <"+"meta charset=\"utf-8\""+" />"+"\n";
 	txt +="  <"+"meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\""+" />"+"\n";
 	txt +="  <"+"link rel=\"stylesheet\" href=\"node_modules/semantic-ui/dist/semantic.min.css\""+" />"+"\n";
-  txt +="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
+  txt +="  <"+"script src=\"node_modules/jquery/dist/jquery.min.js\">"+"</"+"script"+">"+"\n";
 	txt +="  <"+"script src=\"node_modules/semantic-ui/dist/semantic.min.js\">"+"</"+"script"+">";
 	appendJSLib(txt);  });
 
@@ -126,22 +126,22 @@ $(document).ready(function(){
 	// jQuery
   // v 1x
 	$("#jquery1").click(function() {
-	txt ="  <"+"script src=\"node_modules/jquery/jquery-1.12.4.min.js\">"+"</"+"script"+">"+"\n";
+	txt ="  <"+"script src=\"assets/js/vendor/jquery/jquery-1.12.4.min.js\">"+"</"+"script"+">"+"\n";
 	appendJSLib(txt);  });
   // v 2x
 	$("#jquery2").click(function() {
-	txt ="  <"+"script src=\"node_modules/jquery/jquery-2.2.4.min.js\">"+"</"+"script"+">"+"\n";
+	txt ="  <"+"script src=\"assets/js/vendor/jquery/jquery-2.2.4.min.js\">"+"</"+"script"+">"+"\n";
 	appendJSLib(txt);  });
   // v 3x
   $("#jquery3").click(function() {
-	txt ="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
+	txt ="  <"+"script src=\"node_modules/jquery/dist/jquery.min.js\">"+"</"+"script"+">"+"\n";
 	appendJSLib(txt);  });
 
   // jQuery UI
   $("#jqueryui").click(function() {
- 	txt ="  <"+"link rel=\"stylesheet\" href=\"node_modules/jquery-ui/jquery-ui.min.css\""+"/>"+"\n";
-	txt +="  <"+"script src=\"node_modules/jquery/jquery-3.3.1.min.js\">"+"</"+"script"+">"+"\n";
-	txt +="  <"+"script src=\"node_modules/jquery-ui/jquery-ui.min.js\">"+"</"+"script"+">"+"\n";
+ 	txt ="  <"+"link rel=\"stylesheet\" href=\"assets/js/vendor/jquery-ui/jquery-ui.min.css\""+"/>"+"\n";
+	txt +="  <"+"script src=\"assets/js/vendor/jquery/jquery.min.js\">"+"</"+"script"+">"+"\n";
+	txt +="  <"+"script src=\"assets/js/vendor/jquery-ui/jquery-ui.min.js\">"+"</"+"script"+">"+"\n";
 	appendJSLib(txt);  });
 
   // MooTools
